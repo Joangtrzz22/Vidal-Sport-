@@ -1,0 +1,106 @@
+:root {
+    --fondo-oscuro: #212529; 
+    --naranja: #F68121;
+}
+
+body {
+    background-color: var(--fondo-oscuro);
+    color: white;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+}
+
+/* Header con logo centrado */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 5%;
+    background: linear-gradient(to bottom, #111, #000);
+    border-bottom: 3px solid var(--naranja);
+}
+
+.main-logo {
+    height: 150px; /* Tamaño grande solicitado */
+    width: auto;
+    margin-bottom: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.btn-audio {
+    background: var(--naranja);
+    padding: 6px 15px;
+    border-radius: 4px;
+}
+
+/* Cuadrícula de productos */
+.productos-grid {
+    display: flex;
+    justify-content: center;
+    padding: 50px 5%;
+}
+
+/* Tarjeta de Tenis */
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 350px;
+    position: relative;
+    border-left: 8px solid var(--naranja);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+/* El cuadro donde ocurre el zoom */
+.img-zoom {
+    overflow: hidden; /* Importante para que la imagen no se salga al crecer */
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-in;
+    background: #fdfdfd;
+}
+
+.img-zoom img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.2s ease-out; /* Movimiento suave */
+}
+
+/* Info del producto */
+.info { color: #111; text-align: center; margin-top: 15px; }
+.sub { color: #777; font-size: 0.9rem; }
+.precio { color: var(--naranja); font-size: 1.8rem; font-weight: bold; margin: 10px 0; }
+
+.btn-comprar {
+    width: 100%;
+    background: black;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn-comprar:hover { background: var(--naranja); }
+
+.tag {
+    position: absolute;
+    top: 15px; left: 15px;
+    background: var(--naranja);
+    color: white;
+    padding: 4px 12px;
+    font-weight: bold;
+    z-index: 10;
+}
